@@ -1,0 +1,12 @@
+:global(.app_container) {
+    height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+:root {
+    --default-padding: 32px;
+}

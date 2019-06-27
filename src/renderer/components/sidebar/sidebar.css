@@ -1,0 +1,45 @@
+.container {
+    grid-area: sidebar;
+
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 'logotype' 'content';
+}
+
+.logotype {
+    grid-area: logotype;
+
+    display: block;
+    margin: auto 32px;
+
+    font-size: 32px;
+}
+
+.content {
+    grid-area: content;
+    position: relative;
+
+    width: 100%;
+
+    background: white;
+}
+
+.content::before {
+    content: '';
+
+    display: block;
+    position: absolute;
+
+    right: 0;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.1) 90%,
+        transparent 100%
+    );
+    width: 100%;
+    height: calc(100% - 100px);
+
+    z-index: -1;
+}
